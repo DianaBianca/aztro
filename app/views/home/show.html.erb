@@ -1,0 +1,35 @@
+
+<div class="container">
+	<div class="row d-flex justify-content-center mt-5">
+		<div class="col-12 col-md-8 col-lg-6 col-xl-6">
+			<div class="card py-3 px-2">
+				<h1 class="text-center mb-3 mt-2">Aztro</h1>
+				<div class="division">
+					<div class="row">
+						<div class="col-3"><div class="line l"></div></div>
+						<div class="col-6"><span>Aztro says</span></div>
+						<div class="col-3"><div class="line r"></div></div>
+					</div>
+				</div>
+				<div class="myform">
+				<p class="text-center mb-3 mt-2">
+           <%= @infos["description"] %>
+        </p>
+        <div class="division">
+					<div class="row">
+						<div class="col-3"><div class="line l"></div></div>
+						<div class="col-6"><span>Your lucky color</span></div>
+						<div class="col-3"><div class="line r"></div></div>
+					</div>
+				</div>
+        <p class="text-center mb-3 mt-2">
+           <%= @infos["color"] %>
+        </p>
+        <div class="division">
+					<%= link_to "Return", root_path, class:"btn btn-block btn-primary mt-3 btn-lg" %> 
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

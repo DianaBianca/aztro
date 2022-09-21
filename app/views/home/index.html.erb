@@ -1,0 +1,31 @@
+<div class="container">
+	<div class="row d-flex justify-content-center mt-5">
+		<div class="col-12 col-md-8 col-lg-6 col-xl-6">
+			<div class="card py-3 px-2">
+				<h1 class="text-center mb-3 mt-2">Aztro</h1>
+				<div class="division">
+					<div class="row">
+						<div class="col-3"><div class="line l"></div></div>
+						<div class="col-6"><span>Your Personal Horoscope</span></div>
+						 
+						<div class="col-3"><div class="line r"></div></div>
+					</div>
+				</div>
+				<div class="myform">
+				<%= form_tag("/ask_to_aztro", method: "post") do %>
+					<div class="form-group">
+						<%= label_tag(:sign, 'Your Sign', class: "col-md-12") %> 
+						<%= select_tag(:sign, options_for_select(['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces']), {class: "form-control col-md-12"} ) %>
+  					
+    					<%= label_tag( :date, 'Horoscope for', class: "label col-md-6") %> 
+						<%= select_tag(:date,  options_for_select(['Today', 'Tomorrow', 'Yesterday']), {class: "form-control col-md-12"} ) %>
+                    
+  					
+						<%= submit_tag("Search", class: "btn btn-block btn-primary mt-3 btn-lg") %>
+					</div>
+				<% end %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
